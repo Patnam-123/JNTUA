@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+</head>
+<body>
+   <button onclick="myFunction()"  id="button">Click me</button>
+   <input type="text" id ="input" placeholder="enter the paragraph">
+   <p id="paragraph"></p>
+   <script>
+    function myFunction(){
+        document.getElementById("button").style.backgroundColor = "red";
+    }
+    const input = document.getElementById("input");
+    const paragraph = document.getElementById("paragraph");
+    input.addEventListener("input", function() {
+        paragraph.textContent = input.value;
+    });
+   </script>
+</body>
+</html>

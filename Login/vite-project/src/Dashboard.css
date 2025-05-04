@@ -1,0 +1,99 @@
+/* Ensures full page centering */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+  width: 100vw;  /* Ensure full width */
+  overflow-x: hidden;  /* Remove unwanted horizontal scroll */
+}
+
+/* User Info Card */
+.user-info-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  width: 320px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Card Grid - Ensures No Extra Space */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px; /* Restrict max width */
+  justify-content: center; /* Ensures centering */
+}
+
+/* Individual Card */
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Global Styles to Prevent Extra Space */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Center the Login Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f3f4f6;
+}
+
+.login-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+/* Responsive Fix for Large Screens */
+@media (min-width: 1024px) {
+  .dashboard-container {
+    max-width: 1200px;
+  }
+}

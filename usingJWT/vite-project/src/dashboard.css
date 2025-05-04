@@ -1,0 +1,84 @@
+/* Make sure the entire page is centered */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your layout needs */
+}
+
+/* Styling for the header */
+.dashboard-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Styling for the paragraph with data */
+.dashboard-container p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Center the logout button */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Card container to center images and content */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    max-width: 100%; /* Ensure the container takes up full width */
+}
+
+/* Styling for each card */
+.card {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}

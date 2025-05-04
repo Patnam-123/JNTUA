@@ -1,0 +1,185 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Full-page container */
+body, html {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+    flex-direction: column;
+    overflow: hidden; /* Prevents full-page scroll */
+}
+
+/* User Management Heading */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Add User button - Positioned at top-right */
+.add-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-btn:hover {
+    background: #0056b3;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 600px;
+    height: calc(100vh - 80px); /* Adjust for header and button */
+    margin-top: 60px; /* Push content down to avoid overlap */
+    overflow-y: auto; /* Enables scrolling when users exceed screen */
+    padding-bottom: 20px;
+}
+
+/* Card styles */
+.card {
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 30px;
+    width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Ensuring space below the heading */
+}
+
+/* Form input */
+.user-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* User List */
+.user-card {
+    margin-top: 20px;
+    width: 550px;
+    max-height: 300px; /* Limit height to avoid overlap */
+    overflow-y: auto; /* Enables scrolling when there are too many users */
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* User List Styling */
+.user-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* User Item */
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Update and Delete Buttons */
+.update-btn, .delete-btn {
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Update Button */
+.update-btn {
+    background: #ffcc00;
+    color: #333;
+    margin-right: 5px;
+}
+
+.update-btn:hover {
+    background: #e6b800;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #ff4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+/* Success and Error Messages */
+.success {
+    color: green;
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
