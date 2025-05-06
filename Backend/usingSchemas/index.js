@@ -113,6 +113,7 @@ App.get('/studentfee/:id', async (req, res) => {
     }
 });
 
-App.listen(3000, () => {
-    console.log("Server is running");
+const PORT = process.env.PORT || 3000;
+App.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
