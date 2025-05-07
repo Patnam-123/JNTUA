@@ -25,7 +25,6 @@ db.getConnection((err, connection) => {
   }
 });
 
-// ✅ GET all users
 app.get("/api/users", (req, res) => {
   const query = "SELECT id, name, email FROM users";
   db.query(query, (err, results) => {
@@ -36,8 +35,6 @@ app.get("/api/users", (req, res) => {
     res.json({ success: true, data: results });
   });
 });
-
-// ✅ Create a new user (WITHOUT password hashing ❌)
 app.post("/api/users", (req, res) => {
   const { name, email, password } = req.body;
 
